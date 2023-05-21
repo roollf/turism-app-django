@@ -19,5 +19,7 @@ from siteapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.homeHello)
+    path('hello/', views.homeHello),
+    path('register/', views.register, name='register'),
+    path('login/', views.submit_login, name='login'),
 ]
