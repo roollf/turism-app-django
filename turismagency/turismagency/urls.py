@@ -16,10 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from siteapp import views
+from django.conf.urls import url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.homeHello),
+    path('', views.home_hello),
     path('register/', views.register, name='register'),
     path('login/', views.submit_login, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('register_travel/', views.register_travel, name='register_travel'),
+    path('get_register_travel/', views.get_register_travel, name='get_register_travel'),
+    
 ]
+    
+
+urlpatterns += staticfiles_urlpatterns()

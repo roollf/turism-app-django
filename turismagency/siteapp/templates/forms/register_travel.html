@@ -1,0 +1,62 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <div class="form">
+        <form  method="post">
+            {% csrf_token %}
+
+            <div class="row">
+                <h2>Register Travel</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="form" id="form_label">Title</label><br>
+                    <input class="form-control" type="text" name="title" id="title">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="form" id="form_label">From</label><br>
+                    <input class="form-control" type="text" name="from_place" id="from_place">
+                </div>
+                <div class="col-6">
+                    <label for="form" id="form_label">To</label><br>
+                    <input class="form-control" type="text" name="to_place" id="to_place">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="form" id="form_label">Departure Date</label><br>
+                    <input class="form-control" type="datetime-local" name="departure_date" id="departure_date">
+                </div>
+
+                <div class="col-6">
+                    <label for="form" id="form_label">Arrival Date</label><br>
+                    <input class="form-control" type="datetime-local" name="arrival_date" id="arrival_date">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="form" id="form_label">Note</label><br>
+                    <textarea class="form-control" name="note" id="note" cols="80" rows="3"></textarea>
+                </div>
+            </div>
+            <br><br>
+            <div>
+                <button type="submit" class="btn btn-success">Register</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

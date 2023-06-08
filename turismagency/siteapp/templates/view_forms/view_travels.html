@@ -1,0 +1,42 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+
+<div style="margin-top: 20px;margin-bottom: 10px;"></div>
+<div class="container">
+
+    <div class="row" style="margin-bottom: 10px;">
+        {% for u in user %}
+        <h2 style="color: #1d2254;">Travels Registered by {{u}}</h2>
+        {% endfor %}
+    </div>
+
+    <table class="table table-bordered border-primary" style="margin-bottom: 30px;">
+        <thead>
+            <tr style="background-color: #dce0e8;">
+                <td><b>Id</b></td>
+                <td><b>Title</b></td>
+                <td><b>From</b></td>
+                <td><b>To</b></td>
+                <td><b>Departure Date</b></td>
+                <td><b>Arrival Date<b/></td>
+            </tr>
+        </thead>
+        {% for travel in travels %}
+        <tbody>
+            <tr>
+                <td>{{ travel.id }}</td>
+                <td>{{ travel.title }}</td>
+                <td>{{ travel.from_place }}</td>
+                <td>{{ travel.to_place }}</td>
+                <td>{{ travel.departure_date }}</td>
+                <td>{{ travel.arrival_date }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+
+</div>
+
+{% endblock %}

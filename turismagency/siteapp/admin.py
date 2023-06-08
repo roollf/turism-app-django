@@ -5,6 +5,6 @@ from siteapp.models import schedulingTravel
 
 
 class schedulingTravelAdmin(admin.ModelAdmin):
-    list_display = ('user', 'title', 'from_place', 'to_place')
+    list_display = ('title', 'from_place', 'to_place')
 
 admin.site.register(schedulingTravel, schedulingTravelAdmin)
