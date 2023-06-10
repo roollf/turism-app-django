@@ -18,3 +18,30 @@ class schedulingTravel(models.Model):
         
     def __str__(self):
         return self.title
+    
+    
+class travelInsurance(models.Model):
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    passport = models.CharField(max_length=30)
+    birthday = models.DateField()
+    type_trip = models.CharField(max_length=30)
+    
+    class Meta:
+        db_table = 'travelInsurance'
+        
+    def __str__(self):
+        return self.user
+    
+    
+class commentsAngency(models.Model):
+    
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    comment = models.CharField(max_length=255)
+    
+    class Meta:
+        db_table = 'commentsAngency'
+        
+    def __str__(self):
+        return self.name

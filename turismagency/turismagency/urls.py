@@ -28,7 +28,9 @@ urlpatterns = [
     path('login/', views.submit_login, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('register_travel/', views.register_travel, name='register_travel'),
-    path('get_register_travel/', views.get_register_travel, name='get_register_travel'),
+    path('register_travel_insurance/', views.register_travel_insurance, name='register_travel_insurance'),
+    path('view_info_travels/', views.view_info_travels, name='view_info_travels'),
+    path('register_comment/', views.register_comment, name='register_comment'),
     
 ]
     

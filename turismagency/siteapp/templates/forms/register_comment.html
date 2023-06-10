@@ -1,0 +1,48 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <div class="form">
+        <form  method="post">
+            {% csrf_token %}
+
+            <div class="row">
+                <h2>Customer Review</h2>
+                <h5>Tell us about your experience with our agency.</h5>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="form" id="form_label">Name</label><br>
+                    <input class="form-control" type="text" name="name" id="name">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="form" id="form_label">Title</label><br>
+                    <input class="form-control" type="text" name="title" id="title">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="form" id="form_label">Comment</label><br>
+                    <textarea class="form-control" name="comment" id="comment" cols="30" rows="4"></textarea>
+                </div>
+            </div>
+
+            <br>
+            <div id="submit_button">
+                <button type="submit" class="btn btn-success">Register</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

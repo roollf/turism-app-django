@@ -8,7 +8,7 @@
     }
 
     .carousel-item {
-      height: 500px; /* Define the height of the carousel */
+      height: 600px; /* Define the height of the carousel */
     }
 
     .carousel-item img {
@@ -16,7 +16,12 @@
       height: 100%; /* Ensures the image fills the entire height of the carousel */
     }
 
-    .row {
+    .options_box{
+      background-image: url(https://www.islands.com/wp-content/uploads/sites/13/2021/09/most-beautiful-islands-world-01-capri-shutterstock_366487079.jpg);
+      height: 400px;
+    }
+
+    #cards_content_trips {
       margin-left: 40px;
       margin-right: 10px;
       display: flex;
@@ -25,12 +30,28 @@
       
     }
 
+    #contact_us_button{
+      /*background-color: #93c5d9;*/
+      border-color: #e0ddd5;
+    }
+
+    #info_box{
+      padding: 20px;
+    }
+
+    #elements{
+      font-style: italic;
+      color: #0a2a4a;
+    }
+    #blocks{
+      border-radius: 10px;
+      border-color: blue;
+      background-color: #d1e8ff;
+      border: #0a2a4a;
+      padding: 20px;
+    }
+
 </style>
-<br>
-    {% for u in user %}
-    <button disabled="disabled">{{ u }}</button>
-    {% endfor %}
-    &nbsp;&nbsp;&nbsp;
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -40,24 +61,12 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="static/images/nederland.jpg" class="d-block w-100" alt="...">
-        {% comment %} <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div> {% endcomment %}
       </div>
       <div class="carousel-item">
-        <img src="static/images/seoul.jpg" class="d-block w-100" alt="...">
-        {% comment %} <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div> {% endcomment %}
+        <img src="static/images/landscape.jpg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
         <img src="static/images/london.jpg" class="d-block w-100" alt="...">
-        {% comment %} <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div> {% endcomment %}
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -70,7 +79,55 @@
     </button>
 </div>
 
-<br><br><br>
+<br><br><br><br>
+
+<div class="options_box">
+  <div class="row" style="display: flex; justify-content: center;">
+
+    <div class="col-6" id="info_box">
+      <div class="card" id="contact_us_button">
+        <div class="card-body">
+          <h5 class="card-title">Contact us</h5>
+          <p class="card-text">If you have any questions, let us know. We'll be in contact with you soon enough.</p>
+          <a href="/register_travel" class="btn btn-primary">Click here!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6" id="info_box">
+      <div class="card" id="contact_us_button">
+        <div class="card-body">
+          <h5 class="card-title">Register your Travel <i class="fas fa-plane-departure"></i></h5>
+          <p class="card-text">You can have all your travels registered with us!</p>
+          <a href="/register_travel" class="btn btn-primary">Click here!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6" id="info_box">
+      <div class="card" id="contact_us_button">
+        <div class="card-body">
+          <h5 class="card-title">Register your Travel Insurance</h5>
+          <p class="card-text">Travel with complete peace of mind with our travel insurance!</p>
+          <a href="/register_travel_insurance" class="btn btn-primary">Click here!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6" id="info_box">
+      <div class="card" id="contact_us_button">
+        <div class="card-body">
+          <h5 class="card-title">Customer review</h5>
+          <p class="card-text">Tell us about your experience with our agency!</p>
+          <a href="/register_comment" class="btn btn-primary">Click here!</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br><br><br><br>
 
 <div class="container">
   <div>
@@ -80,7 +137,7 @@
 
 <br>
 <div class="content">
-  <div class="row">
+  <div class="row" id="cards_content_trips">
     <div class="col-3">
       <div class="card" style="width: 15rem; ">
         <img src="static/images/machu-pichu-card.webp" class="card-img-top" alt="..." style="height: 200px;">
@@ -127,6 +184,31 @@
 
   </div>
 </div>
+<br><br><br>
 
+<div class="customer_review">
+  
+  <h2>Customer Reviews</h2>
+  <br>
+  <div class="row">
+    {% for comment in comments %} 
+    <div class="col-3" id="elements">
+      ⭑⭑⭑⭑⭑
+      <br><br>
+      <div id="blocks">
+        <p>{{ comment.name }}</p>
+        <i class="fas fa-quote-left fa-xs"></i>
+        <p>{{ comment.title }}</p>
+        <p>{{ comment.comment }}</p>
+        <i class="fas fa-quote-right fa-xs" style="display: flex; justify-content: end;"></i>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+  
+
+</div>
+<br><br><br><br><br><br>
 
 {% endblock %}
