@@ -20,5 +20,5 @@ The following technologies will be used in this project:
 
 - André Recamonde;
 - Doris Reck; 
-- Karoline Trevizani;
-- Rolf Matela.
+- <a href="https://github.com/KarolTrevizani">Karoline Trevizani</a>;
+- <a href="https://github.com/roollf">Rolf Matela</a>.
