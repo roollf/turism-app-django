@@ -2,23 +2,23 @@
 
 ## 💻 About:
 
-This project is an activity of the software development environments chair of the Systems Analysis and Development course at the University of Fortaleza. This is an activity carried out by a team of four members. 
+This project is an activity of the software development environments subject of the Systems Analysis and Development course at the University of Fortaleza (UNIFOR). This is an activity carried out by a team of four members.
 
-- Neste repositório estão os projetos desenvolvidos durante o Bootcamp.
+- In this repository are the projects developed during the subject period.
 
-## 🛠 Tecnologias
+## 🛠 Technologies
 
 The following technologies will be used in this project:
 
-- Django
-- Python
-- HTML5
-- CSS3
-- JavaScript
+- Django;
+- Python;
+- HTML5;
+- CSS3;
+- JavaScript.
 
 ## Team
 
-- André Recamonte;
+- André Recamonde;
 - Doris Reck; 
-- Karoline Trevizani and
+- Karoline Trevizani;
 - Rolf Matela.
