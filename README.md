@@ -16,7 +16,7 @@ The following technologies will be used in this project:
 - CSS3;
 - JavaScript.
 
-## Team
+## 🎓 Team
 
 - André Recamonde;
 - Doris Reck; 
