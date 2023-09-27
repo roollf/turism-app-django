@@ -10,15 +10,14 @@ This project is an activity of the software development environments subject of 
 
 The following technologies will be used in this project:
 
-- Django;
-- Python;
-- HTML5;
-- CSS3;
+- Django.
+- Python.
+- HTML e CSS.
 - JavaScript.
 
 ## 🎓 Team
 
-- André Recamonde;
-- Doris Reck; 
-- <a href="https://github.com/KarolTrevizani">Karoline Trevizani</a>;
-- <a href="https://github.com/roollf">Rolf Matela</a>.
+- André Recamonde.
+- Doris Reck.
+- [Karoline Trevizani](https://github.com/KarolTrevizani).
+- [Rolf Matela](https://github.com/roollf).
